@@ -1,0 +1,4 @@
+interface:
+  display_name: "TiDB Context Memory"
+  short_description: "Store chunks in TiDB and retrieve context before replying"
+  default_prompt: "Use $tidb-context-memory to store normalized records in TiDB and retrieve the most relevant context before answering."
