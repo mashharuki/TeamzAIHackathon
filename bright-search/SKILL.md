@@ -39,6 +39,10 @@ export BRIGHTDATA_UNLOCKER_ZONE="your-zone-name"
 bash scripts/bright_search.sh "query" [cursor]
 ```
 
+Bright Data の生リクエストに近い形を読みたいときは、
+`references/request-spec.md` を読む。
+そのまま叩ける薄いラッパーは `scripts/request_google_serp.sh`。
+
 ## 使い方
 
 ### 1. 調査のゴールを先に固定する
@@ -85,6 +89,12 @@ bash scripts/bright_search.sh "Haruki pricing consulting"
 mkdir -p research/raw/haruki
 bash scripts/bright_search.sh "Haruki consultant profile" > research/raw/haruki/01-profile.json
 bash scripts/bright_search.sh "Haruki pricing consulting" > research/raw/haruki/02-pricing.json
+```
+
+生の API 応答を確認したいときは:
+
+```bash
+bash scripts/request_google_serp.sh "pizza"
 ```
 
 ### 4. Markdown に整理する
